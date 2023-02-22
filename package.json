@@ -1,19 +1,16 @@
 {
   "name": "@cyrilld/turndown",
-  "description": "A library that converts HTML to Markdown",
+  "description": "An HTML to Markdown converter for React Native",
   "version": "7.1.1",
   "author": "Dom Christie",
   "main": "lib/turndown.cjs.js",
   "module": "lib/turndown.es.js",
   "jsnext:main": "lib/turndown.es.js",
   "browser": {
-    "domino": false,
-    "./lib/turndown.cjs.js": "./lib/turndown.browser.cjs.js",
-    "./lib/turndown.es.js": "./lib/turndown.browser.es.js",
-    "./lib/turndown.umd.js": "./lib/turndown.browser.umd.js"
+    "jsdom": false
   },
   "dependencies": {
-    "domino": "^2.1.6"
+    "jsdom-jscore-rn": "^0.1.8"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^19.0.0",
@@ -36,7 +33,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mixmark-io/turndown.git"
+    "url": "https://github.com/ChrisBergeon/turndown.git"
   },
   "scripts": {
     "build": "npm run build-cjs && npm run build-es && npm run build-umd && npm run build-iife",
