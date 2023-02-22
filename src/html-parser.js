@@ -47,9 +47,9 @@ function createHTMLParser () {
       }
     }
   } else {
-    var domino = require('domino')
+    var jsdom = require('jsdom-jscore-rn')
     Parser.prototype.parseFromString = function (string) {
-      return domino.createDocument(string)
+      return jsdom.html(string)
     }
   }
   return Parser
